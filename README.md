@@ -186,7 +186,6 @@ First, prepare the dataset and modify the relevant paths in configs/FCC/cifar/ba
 bash run.sh
 ```
 
-```
 ## Citation
 If you find our work inspiring or use our codebase in your research, please consider giving a star and a citation.
 ```
