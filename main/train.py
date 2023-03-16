@@ -10,7 +10,6 @@ from utils.utils import (
     get_model,
     get_category_list,
 )
-from utils.cam_based_sampling import cam_based_sampling
 from core.function import train_model, valid_model
 from core.combiner import Combiner
 
@@ -172,10 +171,6 @@ if __name__ == "__main__":
     combiner = Combiner(cfg, device, num_class_list)
     optimizer = get_optimizer(cfg, model)
     scheduler = get_scheduler(cfg, optimizer)
-
-    if cfg.DATASET.GENERATE_CAM_BASED_DATASET:
-        cam_based_sampling(train_set, model, cfg)
-        exit(0)
 
     opt_level = 'O1'
     use_apex = True
