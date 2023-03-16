@@ -22,11 +22,20 @@ torch >= 1.7.1
 tensorboardX >= 2.1 
 tensorflow >= 1.14.0 
 Python 3.6
+apex
 ```
 #### Detailed requirement
 ```bash
 pip install -r requirements.txt
 ```
+The [apex](https://github.com/NVIDIA/apex) **is recommended to be installed for saving GPU memories**:
+```bash 
+pip install -U pip
+git clone https://github.com/NVIDIA/apex
+cd apex
+pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+```
+
 ## Prepare datasets
 **This part is mainly based on https://github.com/zhangyongshun/BagofTricks-LT and https://github.com/Bazinga699/NCL**
 
