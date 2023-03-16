@@ -176,7 +176,7 @@ Here is an example.
   ```
 
 ## Usage
-First, prepare the dataset and modify the relevant paths in configs/FCC/cifar/baseline/cifar100_im100.yaml
+First, prepare the dataset and modify the relevant paths in configs/FCC/xxx.yaml
 #### Parallel training with DataParallel 
 
 ```bash
@@ -184,6 +184,9 @@ First, prepare the dataset and modify the relevant paths in configs/FCC/cifar/ba
 # Train long-tailed CIFAR-100 with imbalanced ratio of 100. 
 # In run.sh, `GPUs` are the GPUs you want to use, such as '0' or`0,1,2,3`.
 bash run.sh
+
+2, If you want to train different methods with FCC.
+# Just modify the "configs/xxx.ymal" in run.sh.
 ```
 
 ## Acknowledgements
