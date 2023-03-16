@@ -33,7 +33,6 @@ def equal_diff_compress(n, feature, label, num_classes, gamma):
 	# setting scaling factor tau
 	tau = []
 	for k in range(num_classes):
-		#tau.append((1 + gamma - k*round((gamma/num_classes),2)))
 		tau.append(round((1 + gamma - k*(gamma/num_classes)),2))
 
 	raw_shape = feature.shape
