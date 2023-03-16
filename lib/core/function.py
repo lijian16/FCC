@@ -15,8 +15,6 @@ except:
     pass
 import os
 
-from fcc.fcc_functions import select_anchor_point, get_fixed_centers
-
 def train_model(
     trainLoader, model, epoch, epoch_number, optimizer, combiner, criterion, cfg, logger, rank=0, use_apex=True, **kwargs
 ):
@@ -37,35 +35,8 @@ def train_model(
 
     all_loss = AverageMeter()
     acc = AverageMeter()
-
-    ######################################################################################
-
-    if cfg.FCC.C_TYPE == 'fcc' and cfg.FCC.WORK and epoch == cfg.FCC.START_EPOCH:
-            get_fixed_centers(model, trainLoader, criterion, kwargs['num_classes'], cfg.TRAIN.BATCH_SIZE, cfg)
-
-    ######################################################################################
-
-
+    
     for i, (image, label, meta) in enumerate(trainLoader):
-
-        ######################################################################################
-        anchor_features = None
-        if cfg.FCC.C_TYPE == 'edc_ns' or cfg.FCC.C_TYPE == 'edc_ns_e':
-            # select anchor point for FCC
-            if cfg.FCC.WORK and epoch == cfg.FCC.START_EPOCH:
-                select_anchor_point(image, label, cfg, kwargs['num_classes'])
-
-
-            if cfg.FCC.WORK and epoch > cfg.FCC.START_EPOCH:
-                model.eval()
-                with torch.no_grad():                
-                    anchor_images = torch.load(os.path.join(cfg.OUTPUT_DIR, cfg.NAME, 'anchor_point', 'anchor_point_image.pth'))
-                    anchor_images.to(kwargs['device'])
-                    anchor_features = model(anchor_images, feature_maps_flag=True)
-
-                model.train()
-
-        ######################################################################################
 
         cnt = label.shape[0]
         loss, now_acc = combiner.forward(model, criterion, image, label, meta, anchor_features=anchor_features)
