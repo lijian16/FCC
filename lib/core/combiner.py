@@ -69,7 +69,7 @@ class Combiner:
             image = torch.cat([image, image_b], dim=0)
             label = torch.cat([label, label_b])
 
-        feature = model(image, feature_fcc_flag=True, label=label, now_epoch=self.epoch, anchor_features=kwargs['anchor_features'])
+        feature = model(image, feature_fcc_flag=True, label=label, now_epoch=self.epoch)
         output = model(feature, classifier_flag=True, label=label)
 
         loss = criterion(output, label, feature=feature)
