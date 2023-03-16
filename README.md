@@ -186,17 +186,5 @@ First, prepare the dataset and modify the relevant paths in configs/FCC/cifar/ba
 bash run.sh
 ```
 
-## Citation
-If you find our work inspiring or use our codebase in your research, please consider giving a star and a citation.
-```
-@inproceedings{li2022nested,
-  title={Nested Collaborative Learning for Long-Tailed Visual Recognition},
-  author={Li, Jun and Tan, Zichang and Wan, Jun and Lei, Zhen and Guo, Guodong},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={6949--6958},
-  year={2022}
-}
-```
-
 ## Acknowledgements
 This is a project based on [Bag of tricks](https://github.com/zhangyongshun/BagofTricks-LT).
