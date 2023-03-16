@@ -9,7 +9,7 @@ import math
 from modules import GAP
 
 
-def fcc(feature, label, num_classes, cfg, anchor=None, **kwargs):
+def fcc(feature, label, num_classes, cfg, **kwargs):
 	"""
 	Feature clusters compression (FCC)
 	gamma: the hyper-parameter for setting scaling factor tau.
