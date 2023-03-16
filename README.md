@@ -1,1 +1,1 @@
-# FCC: Feature Clusters Compression for Long-Tailed Visual Recognition
+## FCC: Feature Clusters Compression for Long-Tailed Visual Recognition
