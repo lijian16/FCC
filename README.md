@@ -12,7 +12,7 @@ This repository is the official PyTorch implementation of the paper in CVPR 2022
 [[PDF]()]
 &nbsp;
 <p align="center">
-<img src='./resources/fcc.jpg' height="50%" width="50%">
+<img src='./resources/paper_image.jpg'>
 </p>
 &nbsp;
 
