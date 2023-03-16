@@ -12,6 +12,6 @@ This repository is the official PyTorch implementation of the paper in CVPR 2022
 [[PDF]()]
 &nbsp;
 <p align="center">
-<img src='./resource/framework_English.png'>
+<img src='./resources/fcc.jpg'>
 </p>
 &nbsp;
