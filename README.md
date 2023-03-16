@@ -1,6 +1,6 @@
 ## FCC: Feature Clusters Compression for Long-Tailed Visual Recognition
 
-This repository is the official PyTorch implementation of the paper in CVPR 2022:
+This repository is the official PyTorch implementation of the paper in CVPR 2023:
 
 **FCC: Feature Clusters Compression for Long-Tailed Visual Recognition**<br/>
 [Jian Li](),
@@ -20,7 +20,7 @@ This repository is the official PyTorch implementation of the paper in CVPR 2022
 
 FCC is a simple and generic method for long-tailed visual recognition, which can be easily achieved and friendly combined with existing long-tailed methods to further boost them. FCC works on backbone features from the last layer of backbone networks. 
 
-# The core code of FCC is available at "lib/fcc/fcc_functions.py".
+**The core code of FCC is available at "lib/fcc/fcc_functions.py**.
 &nbsp;
 <p align="center">
 <img src='./resources/novelty.jpg' height="70%" width="70%">
