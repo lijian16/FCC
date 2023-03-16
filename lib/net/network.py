@@ -91,8 +91,7 @@ class Network(nn.Module):
         x = self.backbone(x)
 
         if self.cfg.FCC.WORK and kwargs['now_epoch'] > self.cfg.FCC.START_EPOCH:
-            #x = fcc(x, kwargs['label'], self.num_classes, self.cfg.FCC.GAMMA, kwargs['anchor_features'], self.cfg.FCC.C_TYPE)
-            x = fcc(x, kwargs['label'], self.num_classes, self.cfg, kwargs['anchor_features'], now_epoch=kwargs['now_epoch'])
+            x = fcc(x, kwargs['label'], self.num_classes, self.cfg, now_epoch=kwargs['now_epoch'])
         
         x = self.module(x)
         x = x.view(x.shape[0], -1)
