@@ -7,7 +7,8 @@ This repository is the official PyTorch implementation of the paper in CVPR 2022
 [Ziyao Meng](),
 [Daqian Shi](),
 [Rui Song](),
-[Xiaolei Diao]() <br/>
+[Xiaolei Diao](),
+[Jingwen Wang]() <br/>
 [[PDF]()]
 &nbsp;
 <p align="center">
