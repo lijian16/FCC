@@ -18,18 +18,19 @@ This repository is the official PyTorch implementation of the paper in CVPR 2022
 
 ## Main requirements
 ```bash
-torch >= 1.7.1 #This is the version I am using, other versions may be accteptable, if there is any problem, go to https://pytorch.org/get-started/previous-versions/ to get right version(espicially CUDA) for your machine.
-tensorboardX >= 2.1 #Visualization of the training process.
-tensorflow >= 1.14.0 #convert long-tailed cifar datasets from tfrecords to jpgs.
-Python 3.6 #This is the version I am using, other versions(python 3.x) may be accteptable.
+torch >= 1.7.1 
+tensorboardX >= 2.1 
+tensorflow >= 1.14.0 
+Python 3.6
 ```
 #### Detailed requirement
 ```bash
 pip install -r requirements.txt
 ```
 ## Prepare datasets
-**This part is mainly based on https://github.com/zhangyongshun/BagofTricks-LT**
-We provide three datasets in this repo: long-tailed CIFAR (CIFAR-LT), long-tailed ImageNet (ImageNet-LT), iNaturalist 2018 (iNat18) and Places_LT. 
+**This part is mainly based on https://github.com/zhangyongshun/BagofTricks-LT and https://github.com/Bazinga699/NCL**
+
+Three widely used datasets are provided in this repo: long-tailed CIFAR (CIFAR-LT), long-tailed ImageNet (ImageNet-LT) and iNaturalist 2018 (iNat18). 
 
 The detailed information of these datasets are shown as follows:
 
@@ -41,7 +42,6 @@ The detailed information of these datasets are shown as follows:
      <th align="center" colspan="2">CIFAR-100-LT</th>
      <th align="center" rowspan="3">ImageNet-LT</th>
      <th align="center" rowspan="3">iNat18</th>
-     <th align="center" rowspan="3">Places_LT</th>
   </tr>
   <tr>
     <td align="center" colspan="4"><b>Imbalance factor</b></td>
@@ -62,7 +62,6 @@ The detailed information of these datasets are shown as follows:
      <td align="center" style="font-weight:normal"> 12,608 </td>
      <td align="center" style="font-weight:normal">11,5846</td>
      <td align="center" style="font-weight:normal">437,513</td>
-     <td align="center" style="font-weight:normal">62,500</td>
   </tr>
   <tr>
      <td align="center" style="font-weight:normal">    Classes</td>
@@ -72,7 +71,6 @@ The detailed information of these datasets are shown as follows:
      <td align="center" style="font-weight:normal">  100  </td>
      <td align="center" style="font-weight:normal"> 1,000 </td>
      <td align="center" style="font-weight:normal">8,142</td>
-     <td align="center" style="font-weight:normal">365</td>
   </tr>
   <tr>
      <td align="center" style="font-weight:normal">Max images</td>
@@ -82,7 +80,6 @@ The detailed information of these datasets are shown as follows:
      <td align="center" style="font-weight:normal">500</td>
      <td align="center" style="font-weight:normal">1,280</td>
      <td align="center" style="font-weight:normal">1,000</td>
-     <td align="center" style="font-weight:normal">4,980</td>
   </tr>
   <tr>
      <td align="center" style="font-weight:normal" >Min images</td>
@@ -92,7 +89,6 @@ The detailed information of these datasets are shown as follows:
      <td align="center" style="font-weight:normal">10</td>
      <td align="center" style="font-weight:normal">5</td>
      <td align="center" style="font-weight:normal">2</td>
-     <td align="center" style="font-weight:normal">5</td>
   </tr>
   <tr>
      <td align="center" style="font-weight:normal">Imbalance factor</td>
@@ -102,7 +98,6 @@ The detailed information of these datasets are shown as follows:
      <td align="center" style="font-weight:normal">50</td>
      <td align="center" style="font-weight:normal">256</td>
      <td align="center" style="font-weight:normal">500</td>
-     <td align="center" style="font-weight:normal">996</td>
   </tr>
 </tbody>
 </table>
@@ -179,48 +174,17 @@ Here is an example.
   python tools/replace_path.py --json_file dataset_json/iNat18_val.json --find_root /media/ssd1/lijun/inaturalist2018/train_val2018 --replaces_to /downloaded/iNat18
   
   ```
-  
-- #### Places_LT
-  
-  You can use the following steps to convert from the original format of Places365-Standard.
-  
-  1. The images and annotations should be downloaded at [Places365-Standard](http://data.csail.mit.edu/places/places365/places365standard_easyformat.tar) firstly. Suppose you have downloaded them at  path `/downloaded/Places365/`.
-  2. Directly replace the data root directory in the file `dataset_json/Places_LT_train.json`, `dataset_json/Places_LT_val.json`,You can handle this with any editor, or use the following command.
-
-  ```bash
-  # replace data root
-  python tools/replace_path.py --json_file dataset_json/Places_LT_train.json --find_root /media/ssd1/lijun/data/places365_standard --replaces_to /downloaded/Places365
-  
-  python tools/replace_path.py --json_file dataset_json/Places_LT_val.json --find_root /media/ssd1/lijun/data/places365_standard --replaces_to /downloaded/Places365
-  
-  ```
 
 ## Usage
-First, prepare the dataset and modify the relevant paths in config/CIFAR100/cifar100_im100_NCL.yaml
+First, prepare the dataset and modify the relevant paths in configs/FCC/cifar/baseline/cifar100_im100.yaml
 #### Parallel training with DataParallel 
 
 ```bash
 1, Train
 # Train long-tailed CIFAR-100 with imbalanced ratio of 100. 
-# `GPUs` are the GPUs you want to use, such as '0' or`0,1,2,3`.
-bash data_parallel_train.sh /home/lijun/papers/NCL/config/CIFAR/CIFAR100/cifar100_im100_NCL.yaml 0
+# In run.sh, `GPUs` are the GPUs you want to use, such as '0' or`0,1,2,3`.
+bash run.sh
 ```
-
-#### Distributed training with DistributedDataParallel 
-Note that if you choose to train with DistributedDataParallel, the BATCH_SIZE in .yaml indicates the number on each GPU!
-
-Default training batch-size: CIFAR: 64; ImageNet_LT: 256; Places_LT: 256; iNat18: 512.
-
-e.g. if you want to train NCL with batch-size=512 on 8 GPUS, you should set the BATCH_SIZE in .yaml to 64.
-```bash
-1, Change the NCCL_SOCKET_IFNAME in run_with_distributed_parallel.sh to [your own socket name]. 
-export NCCL_SOCKET_IFNAME = [your own socket name]
-
-2, Train
-# Train inaturalist2018. 
-# `GPUs` are the GPUs you want to use, such as `0,1,2,3,4,5,6,7`.
-# `NUM_GPUs` are the number of GPUs you want to use. If you set `GPUs` to `0,1,2,3,4,5,6,7`, then `NUM_GPUs` should be `8`.
-bash distributed_data_parallel_train.sh config/iNat18/inat18_NCL.yaml 8 0,1,2,3,4,5,6,7
 
 ```
 ## Citation
@@ -237,7 +201,3 @@ If you find our work inspiring or use our codebase in your research, please cons
 
 ## Acknowledgements
 This is a project based on [Bag of tricks](https://github.com/zhangyongshun/BagofTricks-LT).
-
-The data augmentations in dataset are based on [PaCo](https://github.com/dvlab-research/Parametric-Contrastive-Learning)
-
-The MOCO in constrstive learning is based on [MOCO](https://github.com/facebookresearch/moco)
