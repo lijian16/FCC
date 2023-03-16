@@ -39,7 +39,7 @@ def train_model(
     for i, (image, label, meta) in enumerate(trainLoader):
 
         cnt = label.shape[0]
-        loss, now_acc = combiner.forward(model, criterion, image, label, meta, anchor_features=anchor_features)
+        loss, now_acc = combiner.forward(model, criterion, image, label, meta)
 
         optimizer.zero_grad()
 
