@@ -22,7 +22,6 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
 <p align="center">
 <img src='./resources/novelty.jpg' height="70%" width="70%">
 </p>
-&nbsp;
 
 ## Main requirements
 ```bash
