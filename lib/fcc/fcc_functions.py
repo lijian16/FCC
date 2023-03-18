@@ -53,7 +53,7 @@ def equal_diff_compress(n, feature, label, num_classes, gamma):
 """
 def equal_diff_compress(n, feature, label, num_classes, gamma):
 	'''
-	This function is an older version of FCC, which is slower and has weaker performance compared to the above version.
+	This founction is an older version of FCC, which is slower and less performant compared to the above-mentioned version.
 	'''
 
 	tau = []
