@@ -50,8 +50,23 @@ def equal_diff_compress(n, feature, label, num_classes, gamma):
 
 	return new_features
 
+"""
+def equal_diff_compress(n, feature, label, num_classes, gamma):
+	'''
+	This function is an older version of FCC, which is slower and has weaker performance compared to the above version.
+	'''
 
+	tau = []
+	for k in range(num_classes):
+		tau.append((1 + gamma - k*round((gamma/num_classes),2)))
 
+	new_features = []
+	for i in range(n):
+		new_features.append(feature[i]*tau[label[i]])
+
+	#return feature
+	return torch.stack(new_features)
+"""
 
 
 
