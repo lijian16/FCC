@@ -23,6 +23,76 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
 <img src='./resources/novelty.jpg' height="70%" width="70%">
 </p>
 
+## The comparison between raw methods and those with our FCC
+
+- We use **Top-1 error rates** as our evaluation metric.
+- You can click the `Baseline` in the table below to see the experimental settings and corresponding running commands. 
+
+<table>
+<thead>
+  <tr>
+    <th rowspan="2" align="center">Datasets</th>
+    <th align="center"  colspan="3">CIFAR-10-LT-50</td>
+    <th align="center"  colspan="3">CIFAR-10-LT-100</td>
+    <th align="center"  colspan="3">CIFAR-100-LT-50</td>
+    <th align="center" rowspan="3">CIFAR-100-LT-100</th>
+  </tr>
+  <tr>
+    <th align="center" >Raw</td>
+    <th align="center" >FCC</td>
+    <th align="center" >Incr.</td>
+    <th align="center" >Raw</td>
+    <th align="center" >FCC</td>
+    <th align="center" >Incr.</td>
+    <th align="center" >Raw</td>
+    <th align="center" >FCC</td>
+    <th align="center" >Incr.</td>
+    <th align="center" >Raw</td>
+    <th align="center" >FCC</td>
+    <th align="center" >Incr.</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th align="center" style="font-weight:normal">Backbones</td>
+    <th align="center"  colspan="4" style="font-weight:normal">ResNet-32</td>
+    <th align="center" style="font-weight:normal">ResNet-10</td>
+    <th align="center" style="font-weight:normal" >ResNet-32</td>
+  </tr>
+  <tr>
+    <th align="left" style="font-weight:normal"><details><summary>Baseline</summary>
+      <ol>
+      <li>CONFIG (from left to right): 
+        <ul>
+          <li>configs/cao_cifar/baseline/{cifar10_im100.yaml, cifar10_im50.yaml, cifar100_im100.yaml, cifar100_im50.yaml}</li>
+          <li>configs/ImageNet_LT/imagenetlt_baseline.yaml</li>
+          <li>configs/iNat18/iNat18_baseline.yaml</li>
+        </ul>
+        </li><br/>
+      <li>Running commands:
+        <ul>
+          <li>For CIFAR-LT and ImageNet-LT: bash data_parallel_train.sh CONFIG GPU</li>
+          <li>For iNat18: bash distributed_data_parallel_train.sh configs/iNat18/iNat18_baseline.yaml NUM_GPUs GPUs</li>
+        </ul>
+      </li>
+      </ol>
+      </details></td>
+    <th align="center" style="font-weight:normal">22.99</td>
+    <th align="center" style="font-weight:normal">19.78</td>
+    <th align="center" style="font-weight:normal">+3.21</td>
+    <th align="center" style="font-weight:normal">27.59</td>
+    <th align="center" style="font-weight:normal">24.08</td>
+    <th align="center" style="font-weight:normal">+3.51</td>
+    <th align="center" style="font-weight:normal">57.38</td>
+    <th align="center" style="font-weight:normal">54.83</td>
+    <th align="center" style="font-weight:normal">+2.55</td>
+    <th align="center" style="font-weight:normal">60.92</td>
+    <th align="center" style="font-weight:normal">58.93</td>
+    <th align="center" style="font-weight:normal">+1.99</td>
+  </tr>
+</tbody>
+</table>
+
 ## Main requirements
 ```bash
 torch >= 1.7.1 
