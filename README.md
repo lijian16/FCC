@@ -54,12 +54,6 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
 </thead>
 <tbody>
   <tr>
-    <th align="center" style="font-weight:normal">Backbones</td>
-    <th align="center"  colspan="4" style="font-weight:normal">ResNet-32</td>
-    <th align="center" style="font-weight:normal">ResNet-10</td>
-    <th align="center" style="font-weight:normal" >ResNet-32</td>
-  </tr>
-  <tr>
     <th align="left" style="font-weight:normal"><details><summary>Baseline</summary>
       <ol>
       <li>CONFIG (from left to right): 
