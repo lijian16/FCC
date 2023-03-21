@@ -71,18 +71,18 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
       </li>
       </ol>
       </details></td>
-    <th align="center" style="font-weight:normal">22.99</td>
-    <th align="center" style="font-weight:normal">19.78</td>
-    <td align="center" style="font-weight:normal" font-color="red"><font color="red" >+3.21</font></td>
-    <th align="center" style="font-weight:normal">27.59</td>
-    <th align="center" style="font-weight:normal">24.08</td>
+    <th align="center" style="font-weight:normal">$22.99$</td>
+    <th align="center" style="font-weight:normal">$19.78$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+3.21}$</td>
+    <th align="center" style="font-weight:normal">27.59$</td>
+    <th align="center" style="font-weight:normal">24.08$</td>
     <th align="center" style="font-weight:normal">$\color{red}{+3.51}$</td>
-    <th align="center" style="font-weight:normal">57.38</td>
-    <th align="center" style="font-weight:normal">54.83</td>
-    <th align="center" style="font-weight:normal">+2.55</td>
-    <th align="center" style="font-weight:normal">60.92</td>
-    <th align="center" style="font-weight:normal">58.93</td>
-    <th align="center" style="font-weight:normal">+1.99</td>
+    <th align="center" style="font-weight:normal">$57.38$</td>
+    <th align="center" style="font-weight:normal">$54.83$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+2.55}$</td>
+    <th align="center" style="font-weight:normal">$60.92$</td>
+    <th align="center" style="font-weight:normal">$58.93$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+1.99}$</td>
   </tr>
 </tbody>
 </table>
