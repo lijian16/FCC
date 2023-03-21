@@ -74,8 +74,8 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
     <th align="center" style="font-weight:normal">$22.99$</td>
     <th align="center" style="font-weight:normal">$19.78$</td>
     <th align="center" style="font-weight:normal">$\color{red}{+3.21}$</td>
-    <th align="center" style="font-weight:normal">27.59$</td>
-    <th align="center" style="font-weight:normal">24.08$</td>
+    <th align="center" style="font-weight:normal">$27.59$</td>
+    <th align="center" style="font-weight:normal">$24.08$</td>
     <th align="center" style="font-weight:normal">$\color{red}{+3.51}$</td>
     <th align="center" style="font-weight:normal">$57.38$</td>
     <th align="center" style="font-weight:normal">$54.83$</td>
