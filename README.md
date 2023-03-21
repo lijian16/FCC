@@ -59,7 +59,7 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
       <li>CONFIG (from left to right): 
         <ul>
           <li>Raw: configs/cao_cifar/baseline/{cifar10_im100.yaml, cifar10_im50.yaml, cifar100_im100.yaml, cifar100_im50.yaml}</li>
-          <li>FCC: configs/cifar/bseline/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+          <li>FCC: configs/FCC/cifar/bseline/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
         </ul>
         </li><br/>
       <li>Running commands:
@@ -89,7 +89,7 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
       <li>CONFIG (from left to right): 
         <ul>
           <li>Raw: configs/cao_cifar/re_weighting/focal/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
-          <li>FCC: configs/cifar/re_weighting/focal/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+          <li>FCC: configs/FCC/cifar/re_weighting/focal/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
         </ul>
         </li><br/>
       <li>Running commands:
