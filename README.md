@@ -207,6 +207,147 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
 </tbody>
 </table>
 
+<table>
+<thead>
+  <tr>
+    <th rowspan="2" align="center">Datasets</th>
+    <th align="center"  colspan="3">ImageNet-LT</td>
+    <th align="center"  colspan="3">iNaturalist 2018</td>
+  </tr>
+  <tr>
+    <th align="center" >Raw</td>
+    <th align="center" >FCC</td>
+    <th align="center" >Incr.</td>
+    <th align="center" >Raw</td>
+    <th align="center" >FCC</td>
+    <th align="center" >Incr.</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th align="left" style="font-weight:normal"><details><summary>Baseline</summary>
+      <ol>
+      <li>CONFIG (from left to right): 
+        <ul>
+          <li>Raw: configs/cao_cifar/baseline/{cifar10_im100.yaml, cifar10_im50.yaml, cifar100_im100.yaml, cifar100_im50.yaml}</li>
+          <li>FCC: configs/FCC/cifar/bseline/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+        </ul>
+        </li><br/>
+      <li>Running commands:
+        <ul>
+          <li>Change config in run.sh: bash run.sh</li>
+        </ul>
+      </li>
+      </ol>
+      </details></td>
+    <th align="center" style="font-weight:normal">$22.99$</td>
+    <th align="center" style="font-weight:normal">$19.78$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+3.21}$</td>
+    <th align="center" style="font-weight:normal">$27.59$</td>
+    <th align="center" style="font-weight:normal">$24.08$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+3.51}$</td>
+  </tr>
+  
+  <tr>
+    <th align="left" style="font-weight:normal"><details><summary>Focal loss</summary>
+      <ol>
+      <li>CONFIG (from left to right): 
+        <ul>
+          <li>Raw: configs/cao_cifar/re_weighting/focal/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+          <li>FCC: configs/FCC/cifar/re_weighting/focal/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+        </ul>
+        </li><br/>
+      <li>Running commands:
+        <ul>
+          <li>Change config in run.sh: bash run.sh</li>
+        </ul>
+      </li>
+      </ol>
+      </details></td>
+    <th align="center" style="font-weight:normal">$23.29$</td>
+    <th align="center" style="font-weight:normal">$20.49$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+2.80}$</td>
+    <th align="center" style="font-weight:normal">$27.94$</td>
+    <th align="center" style="font-weight:normal">$26.23$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+1.71}$</td>
+  </tr>
+  
+  <tr>
+    <th align="left" style="font-weight:normal"><details><summary>CBCE</summary>
+      <ol>
+      <li>CONFIG (from left to right): 
+        <ul>
+          <li>Raw: configs/cao_cifar/re_weighting/cbce/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+          <li>FCC: configs/FCC/cifar/re_weighting/cbce/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+        </ul>
+        </li><br/>
+      <li>Running commands:
+        <ul>
+          <li>Change config in run.sh: bash run.sh</li>
+        </ul>
+      </li>
+      </ol>
+      </details></td>
+    <th align="center" style="font-weight:normal">$21.48$</td>
+    <th align="center" style="font-weight:normal">$19.51$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+1.97}$</td>
+    <th align="center" style="font-weight:normal">$27.50$</td>
+    <th align="center" style="font-weight:normal">$24.15$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+3.35}$</td>
+  </tr>
+  
+  <tr>
+    <th align="left" style="font-weight:normal"><details><summary>CELS</summary>
+      <ol>
+      <li>CONFIG (from left to right): 
+        <ul>
+          <li>Raw: configs/cao_cifar/re_weighting/cels/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+          <li>FCC: configs/FCC/cifar/re_weighting/cels/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+        </ul>
+        </li><br/>
+      <li>Running commands:
+        <ul>
+          <li>Change config in run.sh: bash run.sh</li>
+        </ul>
+      </li>
+      </ol>
+      </details></td>
+    <th align="center" style="font-weight:normal">$22.70$</td>
+    <th align="center" style="font-weight:normal">$18.97$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+3.73}$</td>
+    <th align="center" style="font-weight:normal">$27.49$</td>
+    <th align="center" style="font-weight:normal">$26.40$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+1.09}$</td>
+  </tr>
+  
+  <tr>
+    <th align="left" style="font-weight:normal"><details><summary>SR sampling</summary>
+      <ol>
+      <li>CONFIG (from left to right): 
+        <ul>
+          <li>Raw: configs/cao_cifar/re_sampling/square/celas/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+          <li>FCC: configs/FCC/cifar/re_sampling/square/celas/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+        </ul>
+        </li><br/>
+      <li>Running commands:
+        <ul>
+          <li>Change config in run.sh: bash run.sh</li>
+        </ul>
+      </li>
+      </ol>
+      </details></td>
+    <th align="center" style="font-weight:normal">$20.89$</td>
+    <th align="center" style="font-weight:normal">$20.41$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+0.48}$</td>
+    <th align="center" style="font-weight:normal">$28.03$</td>
+    <th align="center" style="font-weight:normal">$25.82$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+2.21}$</td>
+  </tr>
+  
+  
+</tbody>
+</table>
+
 ## Main requirements
 ```bash
 torch >= 1.7.1 
