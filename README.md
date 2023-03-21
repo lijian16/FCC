@@ -35,7 +35,7 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
     <th align="center"  colspan="3">CIFAR-10-LT-50</td>
     <th align="center"  colspan="3">CIFAR-10-LT-100</td>
     <th align="center"  colspan="3">CIFAR-100-LT-50</td>
-    <th align="center" rowspan="3">CIFAR-100-LT-100</th>
+    <th align="center" colspan="3">CIFAR-100-LT-100</th>
   </tr>
   <tr>
     <th align="center" >Raw</td>
