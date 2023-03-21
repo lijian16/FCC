@@ -59,14 +59,11 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
       <li>CONFIG (from left to right): 
         <ul>
           <li>configs/cao_cifar/baseline/{cifar10_im100.yaml, cifar10_im50.yaml, cifar100_im100.yaml, cifar100_im50.yaml}</li>
-          <li>configs/ImageNet_LT/imagenetlt_baseline.yaml</li>
-          <li>configs/iNat18/iNat18_baseline.yaml</li>
         </ul>
         </li><br/>
       <li>Running commands:
         <ul>
-          <li>For CIFAR-LT and ImageNet-LT: bash data_parallel_train.sh CONFIG GPU</li>
-          <li>For iNat18: bash distributed_data_parallel_train.sh configs/iNat18/iNat18_baseline.yaml NUM_GPUs GPUs</li>
+          <li>Change config in run.sh: bash run.sh</li>
         </ul>
       </li>
       </ol>
