@@ -81,6 +81,35 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
     <th align="center" style="font-weight:normal">$58.93$</td>
     <th align="center" style="font-weight:normal">$\color{red}{+1.99}$</td>
   </tr>
+  
+  <tr>
+    <th align="left" style="font-weight:normal"><details><summary>Focal loss</summary>
+      <ol>
+      <li>CONFIG (from left to right): 
+        <ul>
+          <li>configs/cao_cifar/focal/{cifar10_im100.yaml, cifar10_im50.yaml, cifar100_im100.yaml, cifar100_im50.yaml}</li>
+        </ul>
+        </li><br/>
+      <li>Running commands:
+        <ul>
+          <li>Change config in run.sh: bash run.sh</li>
+        </ul>
+      </li>
+      </ol>
+      </details></td>
+    <th align="center" style="font-weight:normal">$23.29$</td>
+    <th align="center" style="font-weight:normal">$20.49$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+2.80}$</td>
+    <th align="center" style="font-weight:normal">$27.94$</td>
+    <th align="center" style="font-weight:normal">$26.23$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+1.71}$</td>
+    <th align="center" style="font-weight:normal">$57.25$</td>
+    <th align="center" style="font-weight:normal">$55.24$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+2.01}$</td>
+    <th align="center" style="font-weight:normal">$62.29$</td>
+    <th align="center" style="font-weight:normal">$58.63$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+3.66}$</td>
+  </tr>
 </tbody>
 </table>
 
