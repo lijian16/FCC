@@ -73,7 +73,7 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
       </details></td>
     <th align="center" style="font-weight:normal">22.99</td>
     <th align="center" style="font-weight:normal">19.78</td>
-    <th align="center" style="font-weight:normal" color=>+3.21</td>
+    <th align="center" style="font-weight:normal"><font color=red>+3.21</font></td>
     <th align="center" style="font-weight:normal">27.59</td>
     <th align="center" style="font-weight:normal">24.08</td>
     <th align="center" style="font-weight:normal">+3.51</td>
