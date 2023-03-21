@@ -112,6 +112,37 @@ FCC is a simple and generic method for long-tailed visual recognition, which can
     <th align="center" style="font-weight:normal">$58.63$</td>
     <th align="center" style="font-weight:normal">$\color{red}{+3.66}$</td>
   </tr>
+  
+  <tr>
+    <th align="left" style="font-weight:normal"><details><summary>CBCE</summary>
+      <ol>
+      <li>CONFIG (from left to right): 
+        <ul>
+          <li>Raw: configs/cao_cifar/re_weighting/cbce/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+          <li>FCC: configs/FCC/cifar/re_weighting/cbce/{cifar10_im50.yaml, cifar10_im100.yaml, cifar100_im50.yaml, cifar100_im100.yaml}</li>
+        </ul>
+        </li><br/>
+      <li>Running commands:
+        <ul>
+          <li>Change config in run.sh: bash run.sh</li>
+        </ul>
+      </li>
+      </ol>
+      </details></td>
+    <th align="center" style="font-weight:normal">$21.48$</td>
+    <th align="center" style="font-weight:normal">$19.51$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+1.97}$</td>
+    <th align="center" style="font-weight:normal">$27.50$</td>
+    <th align="center" style="font-weight:normal">$24.15$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+3.35}$</td>
+    <th align="center" style="font-weight:normal">$56.58$</td>
+    <th align="center" style="font-weight:normal">$54.60$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+1.98}$</td>
+    <th align="center" style="font-weight:normal">$61.56$</td>
+    <th align="center" style="font-weight:normal">$59.59$</td>
+    <th align="center" style="font-weight:normal">$\color{red}{+1.97}$</td>
+  </tr>
+  
 </tbody>
 </table>
 
