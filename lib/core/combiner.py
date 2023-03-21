@@ -187,7 +187,7 @@ class Combiner:
         mixed_image = mixed_image.to(self.device)
         
         #feature = model(mixed_image, feature_flag=True)
-        feature = model(mixed_image, feature_fcc_flag=True, label=label, now_epoch=self.epoch, anchor_features=kwargs['anchor_features'])
+        feature = model(mixed_image, feature_fcc_flag=True, label=label, now_epoch=self.epoch)
 
 
         output = model(feature, classifier_flag=True)
