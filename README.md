@@ -204,6 +204,18 @@ bash run.sh
 2, If you want to train different methods with FCC.
 # Just modify the "configs/xxx.ymal" in run.sh.
 ```
+## Citation
+```bash
+@InProceedings{Li_2023_CVPR,
+    author    = {Li, Jian and Meng, Ziyao and Shi, Daqian and Song, Rui and Diao, Xiaolei and Wang, Jingwen and Xu, Hao},
+    title     = {FCC: Feature Clusters Compression for Long-Tailed Visual Recognition},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {24080-24089}
+}
+```
+
 
 ## Acknowledgements
 This is a project based on [Bag of tricks](https://github.com/zhangyongshun/BagofTricks-LT).
