@@ -9,7 +9,7 @@ This repository is the official PyTorch implementation of the paper in CVPR 2023
 [Rui Song](),
 [Xiaolei Diao](),
 [Jingwen Wang]() <br/>
-[[PDF]()]
+[[PDF](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_FCC_Feature_Clusters_Compression_for_Long-Tailed_Visual_Recognition_CVPR_2023_paper.pdf)]
 &nbsp;
 <p align="center">
 <img src='./resources/paper_image.jpg'>
